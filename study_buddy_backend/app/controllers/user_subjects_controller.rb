@@ -1,0 +1,2 @@
+class UserSubjectsController < ApplicationController
+end

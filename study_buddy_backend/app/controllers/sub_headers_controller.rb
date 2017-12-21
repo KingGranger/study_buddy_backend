@@ -1,0 +1,2 @@
+class SubHeadersController < ApplicationController
+end
