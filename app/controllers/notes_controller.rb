@@ -7,12 +7,6 @@ class NotesController < ApplicationController
   end
 
   def create
-    # user = User.find_by(username: params[:username])
-    # if user.authenticate(params[:passowrd])
-    #   render json: {username:user.username, id: user.id}
-    # else
-    #   render json:{error: 'Invalid User hoe!'}, status: 401
-    # end
     @note = Note.create(note_params)
     render json: @note
 
@@ -34,7 +28,7 @@ class NotesController < ApplicationController
   end
 
   def note_params
-    params.require(:note).permit(:username, :first_name, :last_name, :password_digest)
+    params.require(:note).permit(:content)
   end
 
 end
