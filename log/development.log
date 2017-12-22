@@ -187,174 +187,6 @@ Migrating to CreateTemplates (20171221193343)
             FROM sqlite_temp_master
             WHERE name='index_user_subjects_on_user_id' AND type='index'
 [0m
-<<<<<<< HEAD
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_notes_on_template_id' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_notes_on_template_id' AND type='index'
-[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_notes_on_type_id' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_notes_on_type_id' AND type='index'
-[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_notes_on_sub_header_id' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_notes_on_sub_header_id' AND type='index'
-[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_notes_on_user_id' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_notes_on_user_id' AND type='index'
-[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_sub_headers_on_subject_id' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_sub_headers_on_subject_id' AND type='index'
-[0m
-  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_user_subjects_on_subject_id' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_user_subjects_on_subject_id' AND type='index'
-[0m
-  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
-            FROM sqlite_master
-            WHERE name='index_user_subjects_on_user_id' AND type='index'
-            UNION ALL
-            SELECT sql
-            FROM sqlite_temp_master
-            WHERE name='index_user_subjects_on_user_id' AND type='index'
-[0m
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "business"], ["created_at", "2017-12-21 22:36:24.910672"], ["updated_at", "2017-12-21 22:36:24.910672"]]
-  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "computer science"], ["created_at", "2017-12-21 22:36:24.919059"], ["updated_at", "2017-12-21 22:36:24.919059"]]
-  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "english"], ["created_at", "2017-12-21 22:36:24.922892"], ["updated_at", "2017-12-21 22:36:24.922892"]]
-  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "life skills"], ["created_at", "2017-12-21 22:36:24.926027"], ["updated_at", "2017-12-21 22:36:24.926027"]]
-  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "foreign language"], ["created_at", "2017-12-21 22:36:24.929982"], ["updated_at", "2017-12-21 22:36:24.929982"]]
-  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "math"], ["created_at", "2017-12-21 22:36:24.933416"], ["updated_at", "2017-12-21 22:36:24.933416"]]
-  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "performing arts"], ["created_at", "2017-12-21 22:36:24.936875"], ["updated_at", "2017-12-21 22:36:24.936875"]]
-  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "physical education"], ["created_at", "2017-12-21 22:36:24.940545"], ["updated_at", "2017-12-21 22:36:24.940545"]]
-  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "science"], ["created_at", "2017-12-21 22:36:24.944116"], ["updated_at", "2017-12-21 22:36:24.944116"]]
-  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "social studies"], ["created_at", "2017-12-21 22:36:24.948183"], ["updated_at", "2017-12-21 22:36:24.948183"]]
-  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "art"], ["created_at", "2017-12-21 22:36:24.952582"], ["updated_at", "2017-12-21 22:36:24.952582"]]
-  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("subject_name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["subject_name", "social science"], ["created_at", "2017-12-21 22:36:24.956276"], ["updated_at", "2017-12-21 22:36:24.956276"]]
-  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mSubject Load (1.4ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" LIMIT ?[0m  [["LIMIT", 11]]
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "really good"], ["created_at", "2017-12-21 22:52:18.475887"], ["updated_at", "2017-12-21 22:52:18.475887"]]
-  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "cool"], ["created_at", "2017-12-21 22:52:18.479937"], ["updated_at", "2017-12-21 22:52:18.479937"]]
-  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "could be better"], ["created_at", "2017-12-21 22:52:18.483276"], ["updated_at", "2017-12-21 22:52:18.483276"]]
-  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "nice"], ["created_at", "2017-12-21 22:52:18.486580"], ["updated_at", "2017-12-21 22:52:18.486580"]]
-  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sloppy mess"], ["created_at", "2017-12-21 22:52:18.490758"], ["updated_at", "2017-12-21 22:52:18.490758"]]
-  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "100-fire-100"], ["created_at", "2017-12-21 22:52:18.494593"], ["updated_at", "2017-12-21 22:52:18.494593"]]
-  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "do not use this one"], ["created_at", "2017-12-21 22:52:18.498532"], ["updated_at", "2017-12-21 22:52:18.498532"]]
-  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "really good"], ["created_at", "2017-12-21 22:52:33.206020"], ["updated_at", "2017-12-21 22:52:33.206020"]]
-  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "cool"], ["created_at", "2017-12-21 22:52:33.211696"], ["updated_at", "2017-12-21 22:52:33.211696"]]
-  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "could be better"], ["created_at", "2017-12-21 22:52:33.215956"], ["updated_at", "2017-12-21 22:52:33.215956"]]
-  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "nice"], ["created_at", "2017-12-21 22:52:33.219219"], ["updated_at", "2017-12-21 22:52:33.219219"]]
-  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "sloppy mess"], ["created_at", "2017-12-21 22:52:33.222360"], ["updated_at", "2017-12-21 22:52:33.222360"]]
-  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "100-fire-100"], ["created_at", "2017-12-21 22:52:33.225754"], ["updated_at", "2017-12-21 22:52:33.225754"]]
-  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "templates" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "do not use this one"], ["created_at", "2017-12-21 22:52:33.228934"], ["updated_at", "2017-12-21 22:52:33.228934"]]
-  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "bullet"], ["created_at", "2017-12-21 22:52:33.239544"], ["updated_at", "2017-12-21 22:52:33.239544"]]
-  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "definition"], ["created_at", "2017-12-21 22:52:33.248031"], ["updated_at", "2017-12-21 22:52:33.248031"]]
-  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "img"], ["created_at", "2017-12-21 22:52:33.251767"], ["updated_at", "2017-12-21 22:52:33.251767"]]
-  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "text"], ["created_at", "2017-12-21 22:52:33.256121"], ["updated_at", "2017-12-21 22:52:33.256121"]]
-  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "code"], ["created_at", "2017-12-21 22:52:33.260084"], ["updated_at", "2017-12-21 22:52:33.260084"]]
-  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "equation"], ["created_at", "2017-12-21 22:52:33.264431"], ["updated_at", "2017-12-21 22:52:33.264431"]]
-  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "figure"], ["created_at", "2017-12-21 22:52:33.267360"], ["updated_at", "2017-12-21 22:52:33.267360"]]
-  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
-=======
 Started GET "/" for 127.0.0.1 at 2017-12-21 17:13:48 -0500
   [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Rails::WelcomeController#index as HTML
@@ -377,9 +209,9 @@ Processing by NotesController#show as HTML
 Completed 404 Not Found in 20ms (ActiveRecord: 1.9ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Note with 'id'=1):
-  
+
 app/controllers/notes_controller.rb:27:in `set_note'
 Started GET "/notes/0" for 127.0.0.1 at 2017-12-21 17:33:24 -0500
 Processing by NotesController#show as HTML
@@ -388,9 +220,9 @@ Processing by NotesController#show as HTML
 Completed 404 Not Found in 4ms (ActiveRecord: 1.1ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Note with 'id'=0):
-  
+
 app/controllers/notes_controller.rb:27:in `set_note'
 Started GET "/notes" for 127.0.0.1 at 2017-12-21 17:33:38 -0500
 Processing by NotesController#index as HTML
@@ -399,9 +231,9 @@ Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
 
 
 Started GET "/notes/edit/:id" for 127.0.0.1 at 2017-12-21 17:43:42 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/notes/edit/:id"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
@@ -423,4 +255,5 @@ puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.0) lib/puma/server.rb:438:in `process_client'
 puma (3.11.0) lib/puma/server.rb:302:in `block in run'
 puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
->>>>>>> 3c08048dd34e7250cb392cfd136e17e637fa0fb8
+  [1m[36mSubject Load (2.6ms)[0m  [1m[34mSELECT  "subjects".* FROM "subjects" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mType Load (0.6ms)[0m  [1m[34mSELECT  "types".* FROM "types" LIMIT ?[0m  [["LIMIT", 11]]
