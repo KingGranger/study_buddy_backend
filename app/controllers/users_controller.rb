@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     # else
     #   render json:{error: 'Invalid User hoe!'}, status: 401
     # end
+    byebug
     @user = User.create(user_params)
     render json: @user
 
