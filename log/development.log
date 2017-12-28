@@ -6076,3 +6076,231 @@ puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.0) lib/puma/server.rb:438:in `process_client'
 puma (3.11.0) lib/puma/server.rb:302:in `block in run'
 puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-12-27 19:32:04 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/genevievecosta/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/genevievecosta/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (5.3ms)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-27 19:32:10 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 17ms (Views: 2.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:34:22 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"Genny", "password"=>"[FILTERED]", "first_name"=>"Genny", "last_name"=>"Genny", "user"=>{"username"=>"Genny", "first_name"=>"Genny", "last_name"=>"Genny"}}
+Completed 500 Internal Server Error in 1316718ms (ActiveRecord: 1.4ms)
+
+
+  
+SystemExit (exit):
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:56:20 -0700
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:56:20 -0700
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:56:20 -0700
+  
+Processing by UsersController#create as JSON
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:56:20 -0700
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:18:in `create'
+  Parameters: {"username"=>"Genny", "password"=>"[FILTERED]", "first_name"=>"Genny", "last_name"=>"Genny", "user"=>{"username"=>"Genny", "first_name"=>"Genny", "last_name"=>"Genny"}}
+Completed 500 Internal Server Error in 2195ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:18:in `create'
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:56:41 -0700
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:56:41 -0700
+Processing by UsersController#create as JSON
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"Genny", "password"=>"[FILTERED]", "first_name"=>"Genny", "last_name"=>"Genny", "user"=>{"username"=>"Genny", "password"=>"[FILTERED]", "first_name"=>"Genny", "last_name"=>"Genny"}}
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"Genny", "password"=>"[FILTERED]", "first_name"=>"Genny", "last_name"=>"Genny", "user"=>{"username"=>"Genny", "password"=>"[FILTERED]", "first_name"=>"Genny", "last_name"=>"Genny"}}
+  Parameters: {"username"=>"Genny", "password"=>"[FILTERED]", "first_name"=>"Genny", "last_name"=>"Genny", "user"=>{"username"=>"Genny", "first_name"=>"Genny", "last_name"=>"Genny"}}
+Completed 500 Internal Server Error in 6088ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 5782ms (ActiveRecord: 0.0ms)
+
+
+  
+Completed 500 Internal Server Error in 3624ms (ActiveRecord: 86.0ms)
+
+
+SystemExit (exit):
+  
+  
+  
+SystemExit (exit):
+SystemExit (exit):
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:18:in `create'
+  
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:18:in `create'
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/users_controller.rb:18:in `create'
+Started GET "/users" for 127.0.0.1 at 2017-12-27 19:57:11 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 18ms (Views: 2.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2017-12-27 19:57:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2017-12-27 19:57:26 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:57:50 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"Genny", "password"=>"[FILTERED]", "first_name"=>"Genny", "last_name"=>"Genny", "user"=>{"username"=>"Genny", "first_name"=>"Genny", "last_name"=>"Genny"}}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Genny"], ["first_name", "Genny"], ["last_name", "Genny"], ["created_at", "2017-12-28 02:57:50.448430"], ["updated_at", "2017-12-28 02:57:50.448430"]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 77ms (Views: 21.1ms | ActiveRecord: 23.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-27 19:57:59 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:58:46 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"Genny2", "password"=>"[FILTERED]", "first_name"=>"Genny2", "last_name"=>"Genny2", "user"=>{"username"=>"Genny2", "first_name"=>"Genny2", "last_name"=>"Genny2"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Genny2"], ["first_name", "Genny2"], ["last_name", "Genny2"], ["created_at", "2017-12-28 02:58:47.061180"], ["updated_at", "2017-12-28 02:58:47.061180"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 18ms (Views: 0.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-27 19:58:55 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-27 19:59:51 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"Genny3", "password_digest"=>"[FILTERED]", "first_name"=>"Genny3", "last_name"=>"Genny3", "user"=>{"username"=>"Genny3", "first_name"=>"Genny3", "last_name"=>"Genny3", "password_digest"=>"[FILTERED]"}}
+Unpermitted parameter: :password_digest
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Genny3"], ["first_name", "Genny3"], ["last_name", "Genny3"], ["created_at", "2017-12-28 02:59:51.344371"], ["updated_at", "2017-12-28 02:59:51.344371"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-27 19:59:55 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-27 20:00:47 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"Genny4", "password_digest"=>"[FILTERED]", "first_name"=>"Genny4", "last_name"=>"Genny4", "user"=>{"username"=>"Genny4", "first_name"=>"Genny4", "last_name"=>"Genny4", "password_digest"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Genny4"], ["first_name", "Genny4"], ["last_name", "Genny4"], ["password_digest", "Genny4"], ["created_at", "2017-12-28 03:00:47.362132"], ["updated_at", "2017-12-28 03:00:47.362132"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 22ms (Views: 0.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-27 20:00:51 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-27 21:25:12 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"jkans", "password_digest"=>"[FILTERED]", "first_name"=>"jkdnc", "last_name"=>"dsjkn", "user"=>{"username"=>"jkans", "first_name"=>"jkdnc", "last_name"=>"dsjkn", "password_digest"=>"[FILTERED]"}}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "jkans"], ["first_name", "jkdnc"], ["last_name", "dsjkn"], ["password_digest", "jdkan"], ["created_at", "2017-12-28 04:25:12.692326"], ["updated_at", "2017-12-28 04:25:12.692326"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 42ms (Views: 4.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-27 21:25:16 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-27 21:38:16 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"dlsknf", "password_digest"=>"[FILTERED]", "first_name"=>"Genny", "last_name"=>"fjn", "user"=>{"username"=>"dlsknf", "first_name"=>"Genny", "last_name"=>"fjn", "password_digest"=>"[FILTERED]"}}
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "dlsknf"], ["first_name", "Genny"], ["last_name", "fjn"], ["password_digest", "sdlknf"], ["created_at", "2017-12-28 04:38:16.250405"], ["updated_at", "2017-12-28 04:38:16.250405"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 33ms (Views: 3.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-27 21:40:26 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-28 13:53:30 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 40ms (Views: 20.3ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-28 13:53:46 -0700
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"larry", "password_digest"=>"[FILTERED]", "first_name"=>"larry", "last_name"=>"larry", "user"=>{"username"=>"larry", "first_name"=>"larry", "last_name"=>"larry", "password_digest"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "larry"], ["first_name", "larry"], ["last_name", "larry"], ["password_digest", "larry"], ["created_at", "2017-12-28 20:53:46.402817"], ["updated_at", "2017-12-28 20:53:46.402817"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 19ms (Views: 0.9ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-12-28 13:53:54 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+

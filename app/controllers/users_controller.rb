@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     # else
     #   render json:{error: 'Invalid User hoe!'}, status: 401
     # end
-    byebug
+    # byebug
     @user = User.create(user_params)
     render json: @user
 
@@ -36,7 +36,7 @@ private
   end
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:user, :first_name, :last_name, :password_digest)
   end
 
 end
