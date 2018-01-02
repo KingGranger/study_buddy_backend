@@ -36,7 +36,7 @@ private
   end
 
   def user_params
-    params.require(:user).permit(:user, :first_name, :last_name, :password_digest)
+    params.require(:user).permit(:username, :first_name, :last_name, :password_digest)
   end
 
 end
