@@ -1,6 +1,6 @@
 
 def templates
-  templates = ['really good', 'cool', 'could be better', 'nice', 'sloppy mess', '100-fire-100', 'do not use this one']
+  templates = ['reallyGood', 'fire', 'couldBeBetter', 'sloppyMess', 'doNotUse']
 
   templates.each do |temp|
     Template.create(name: temp)
