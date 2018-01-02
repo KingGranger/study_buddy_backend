@@ -1,4 +1,4 @@
-class TemplatesController < ApplicationController
+class Api::V1::TemplatesController < ApplicationController
   before_action :set_template, only: [:show, :update, :destroy]
 
   def index

@@ -1,4 +1,4 @@
-class SubHeadersController < ApplicationController
+class Api::V1::SubHeadersController < ApplicationController
   before_action :set_sub_header, only: [:show, :update, :destroy]
 
   def index

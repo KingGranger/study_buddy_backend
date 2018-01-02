@@ -1,4 +1,4 @@
-class TypesController < ApplicationController
+class Api::V1::TypesController < ApplicationController
   before_action :set_type, only: [:show, :update, :destroy]
 
   def index
