@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :notes
       resources :types
       resources :sub_headers
-      resources :user_subjects, only: [:show]
+      resources :user_subjects
       resources :subjects
       resources :users
       post '/auth', to: 'auth#create'

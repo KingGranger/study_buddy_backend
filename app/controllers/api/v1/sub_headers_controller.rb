@@ -3,7 +3,7 @@ class Api::V1::SubHeadersController < ApplicationController
 
   def index
     @sub_headers = SubHeader.all
-    render json: @sub_headers
+    render json: @sub_headers, include: [:subject]
   end
 
   def create

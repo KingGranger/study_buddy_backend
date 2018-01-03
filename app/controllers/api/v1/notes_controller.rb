@@ -7,6 +7,7 @@ class Api::V1::NotesController < ApplicationController
   end
 
   def create
+    # byebug
     @note = Note.create(note_params)
     render json: @note
 
@@ -23,12 +24,9 @@ class Api::V1::NotesController < ApplicationController
 
   private
 
-  def set_note
-    @note = Note.find(params[:id])
-  end
-
   def note_params
-    params.require(:note).permit(:content)
+    params.permit(:user_id, :sub_header_id, :name, :subject_id, :bullet, :definition, :img, :code, :equation, :figure)
   end
+  
 
 end

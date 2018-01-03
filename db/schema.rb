@@ -10,19 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221193343) do
+ActiveRecord::Schema.define(version: 20171221191845) do
 
   create_table "notes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "sub_header_id"
-    t.integer "type_id"
-    t.integer "template_id"
-    t.text "content"
+    t.string "name"
+    t.integer "subject_id"
+    t.text "bullet"
+    t.text "definition"
+    t.text "img"
+    t.text "code"
+    t.text "equation"
+    t.text "figure"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["sub_header_id"], name: "index_notes_on_sub_header_id"
-    t.index ["template_id"], name: "index_notes_on_template_id"
-    t.index ["type_id"], name: "index_notes_on_type_id"
     t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
@@ -36,12 +39,6 @@ ActiveRecord::Schema.define(version: 20171221193343) do
 
   create_table "subjects", force: :cascade do |t|
     t.string "subject_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "templates", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
