@@ -11,7 +11,6 @@ class Api::V1::AuthController < ApplicationController
   end
 
   def show
-    byebug
     if current_user
       render json: {
         id: current_user.id,

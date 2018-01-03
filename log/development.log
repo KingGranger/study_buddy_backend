@@ -9391,3 +9391,116 @@ Processing by Api::V1::UsersController#index as HTML
 Completed 200 OK in 64ms (Views: 55.4ms | ActiveRecord: 4.3ms)
 
 
+Started GET "/api/v1/subjects" for ::1 at 2018-01-03 10:16:27 -0500
+Started GET "/api/v1/sub_headers" for ::1 at 2018-01-03 10:16:27 -0500
+Processing by Api::V1::SubjectsController#index as */*
+Processing by Api::V1::SubHeadersController#index as */*
+  [1m[36mSubject Load (20.9ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mSubHeader Load (38.7ms)[0m  [1m[34mSELECT "sub_headers".* FROM "sub_headers"[0m
+Completed 200 OK in 463ms (Views: 426.9ms | ActiveRecord: 20.9ms)
+
+
+Completed 200 OK in 1602ms (Views: 1551.5ms | ActiveRecord: 38.7ms)
+
+
+Started GET "/api/v1/subjects" for ::1 at 2018-01-03 10:16:38 -0500
+Processing by Api::V1::SubjectsController#index as */*
+  [1m[36mSubject Load (3.7ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+Started GET "/api/v1/sub_headers" for ::1 at 2018-01-03 10:16:38 -0500
+Processing by Api::V1::SubHeadersController#index as */*
+Completed 200 OK in 204ms (Views: 192.8ms | ActiveRecord: 3.7ms)
+
+
+  [1m[36mSubHeader Load (11.7ms)[0m  [1m[34mSELECT "sub_headers".* FROM "sub_headers"[0m
+Completed 200 OK in 1350ms (Views: 1334.5ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/api/v1/subjects" for ::1 at 2018-01-03 10:18:58 -0500
+Started GET "/api/v1/sub_headers" for ::1 at 2018-01-03 10:18:58 -0500
+Processing by Api::V1::SubjectsController#index as */*
+Processing by Api::V1::SubHeadersController#index as */*
+  [1m[36mSubject Load (7.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mSubHeader Load (17.9ms)[0m  [1m[34mSELECT "sub_headers".* FROM "sub_headers"[0m
+Completed 200 OK in 208ms (Views: 188.8ms | ActiveRecord: 7.3ms)
+
+
+Completed 200 OK in 1967ms (Views: 1940.5ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/api/v1/subjects" for ::1 at 2018-01-03 10:19:28 -0500
+Started GET "/api/v1/sub_headers" for ::1 at 2018-01-03 10:19:28 -0500
+Processing by Api::V1::SubjectsController#index as */*
+Started POST "/api/v1/auth/" for ::1 at 2018-01-03 10:19:28 -0500
+Processing by Api::V1::SubHeadersController#index as */*
+  [1m[36mSubject Load (4.8ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+Processing by Api::V1::AuthController#create as */*
+  [1m[36mSubHeader Load (14.8ms)[0m  [1m[34mSELECT "sub_headers".* FROM "sub_headers"[0m
+Completed 200 OK in 203ms (Views: 191.0ms | ActiveRecord: 4.8ms)
+
+
+  Parameters: {"username"=>"james", "password"=>"[FILTERED]", "auth"=>{"username"=>"james", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "james"], ["LIMIT", 1]]
+Completed 200 OK in 284ms (Views: 3.6ms | ActiveRecord: 5.6ms)
+
+
+Completed 200 OK in 1876ms (Views: 1856.9ms | ActiveRecord: 14.8ms)
+
+
+Started POST "/api/v1/auth/" for ::1 at 2018-01-03 10:19:37 -0500
+Started GET "/api/v1/sub_headers" for ::1 at 2018-01-03 10:19:37 -0500
+Processing by Api::V1::SubHeadersController#index as */*
+  [1m[36mSubHeader Load (17.7ms)[0m  [1m[34mSELECT "sub_headers".* FROM "sub_headers"[0m
+Started GET "/api/v1/subjects" for ::1 at 2018-01-03 10:19:37 -0500
+Processing by Api::V1::AuthController#create as */*
+Processing by Api::V1::SubjectsController#index as */*
+  Parameters: {"username"=>"james", "password"=>"[FILTERED]", "auth"=>{"username"=>"james", "password"=>"[FILTERED]"}}
+  [1m[36mSubject Load (3.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "james"], ["LIMIT", 1]]
+Completed 200 OK in 1680ms (Views: 1654.8ms | ActiveRecord: 17.7ms)
+
+
+Completed 401 Unauthorized in 698ms (Views: 9.0ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 1107ms (Views: 1098.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/subjects" for ::1 at 2018-01-03 10:24:40 -0500
+Processing by Api::V1::SubjectsController#index as */*
+Started GET "/api/v1/sub_headers" for ::1 at 2018-01-03 10:24:40 -0500
+Processing by Api::V1::SubHeadersController#index as */*
+  [1m[36mSubject Load (129.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mSubHeader Load (42.8ms)[0m  [1m[34mSELECT "sub_headers".* FROM "sub_headers"[0m
+Started GET "/api/v1/current_user" for ::1 at 2018-01-03 10:24:40 -0500
+Completed 200 OK in 409ms (Views: 268.4ms | ActiveRecord: 129.4ms)
+
+
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Started GET "/api/v1/current_user" for ::1 at 2018-01-03 10:46:39 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+Completed 500 Internal Server Error in 30256ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/api/v1/auth_controller.rb:15:in `show'
+Started GET "/api/v1/current_user" for ::1 at 2018-01-03 10:48:01 -0500
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 196ms (Views: 5.7ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/api/v1/current_user" for ::1 at 2018-01-03 10:50:02 -0500
+Processing by Api::V1::AuthController#show as */*
+  Parameters: {"auth"=>{}}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 401 Unauthorized in 43ms (Views: 4.0ms | ActiveRecord: 3.9ms)
+
+
