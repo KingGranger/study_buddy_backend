@@ -29,11 +29,8 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def user_params
-<<<<<<< HEAD:app/controllers/users_controller.rb
-    params.require(:user).permit(:username, :first_name, :last_name, :password_digest)
-=======
+    # params.require(:user).permit(:username, :first_name, :last_name, :password_digest)
     params.permit(:username, :first_name, :last_name, :password)
->>>>>>> ff5e51c1f78f83939dd5401dac77340579189985:app/controllers/api/v1/users_controller.rb
   end
 
 end

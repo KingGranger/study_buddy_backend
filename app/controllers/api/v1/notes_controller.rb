@@ -3,7 +3,7 @@ class Api::V1::NotesController < ApplicationController
 
   def index
     @notes = Note.all
-    render json: @notes
+    render json: @notes,include: [:sub_header], include: [:type], include: [:user_id]
   end
 
   def create
@@ -23,12 +23,8 @@ class Api::V1::NotesController < ApplicationController
 
   private
 
-  def set_note
-    @note = Note.find(params[:id])
-  end
-
   def note_params
-    params.require(:note).permit(:content)
+    params.permit(:user_id, :sub_header_id, :name, :subject_id)
   end
 
 end

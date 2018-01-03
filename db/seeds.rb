@@ -1,12 +1,4 @@
 
-def templates
-  templates = ['ReallyGood', 'Fire', 'CouldBeBetter', 'SloppyMess', 'DoNotUse']
-
-  templates.each do |temp|
-    Template.create(name: temp)
-  end
-end
-
 def types
   types = ['bullet', 'definition', 'img', 'text', 'code', 'equation', 'figure']
 
@@ -50,5 +42,4 @@ end
 
 
 subheadings()
-templates()
 types()
