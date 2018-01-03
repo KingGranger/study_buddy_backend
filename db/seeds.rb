@@ -34,5 +34,25 @@ subjects={
     end
 end
 
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
+Note.create(user_id: 1, sub_header_id: 1, name: "bears", subject_id: 1, bullet: "bears", definition: "bear
+s", img: "bears", code: "bears", equation: "bears", figure: nil)
 
 subheadings()
