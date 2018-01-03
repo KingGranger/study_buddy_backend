@@ -1,11 +1,5 @@
 
-def types
-  types = ['bullet', 'definition', 'img', 'text', 'code', 'equation', 'figure']
 
-  types.each do |type|
-    Type.create(name: type)
-  end
-end
 
 def subheadings
 subjects={
@@ -42,4 +36,3 @@ end
 
 
 subheadings()
-types()
